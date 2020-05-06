@@ -20,4 +20,4 @@
 $text = sprintf("本日は%d年%d月%d日です", "2020", "4", "25");
 echo $text.PHP_EOL;
 
-echo "web: vendor/bin/heroku-php-apache2 public" > Procfile
+heroku config:set APP_KEY=$(php artisan --no-ansi key:generate --show)
